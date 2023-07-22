@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Animated Login Form</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link href="https://fonts.googleapis.com/css?family=Poppins:600&display=swap" rel="stylesheet">
+	<script src="https://kit.fontawesome.com/a81368914c.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+	<img class="wave" src="wave.png">
+	<div class="container">
+		<div class="img">
+			<img src="bg.svg">
+		</div>
+		<div class="login-content">
+			
+            <form class="mx-1 mx-md-4" action="https://sheetdb.io/api/v1/rthrbvhay734a" method="post" id="sheetdb-form">
+				<img src="avatar.svg">
+				<h2 class="title">Plutoo registration</h2>
+           		<div class="input-div one">
+           		   <div class="i">
+           		   		
+           		   </div>
+           		   <div class="div">
+           		   		<h5>Username</h5>
+           		   		<input type="text" class="input" name="Username">
+           		   </div>
+           		</div>
+                   <div class="input-div one">
+                    <div class="i">
+                            
+                    </div>
+                    <div class="div">
+                            <h5>Gmail</h5>
+                            <input type="text" class="input" name="Gmail">
+                    </div>
+                 </div>
+                 <div class="input-div one">
+                    <div class="i">
+                        
+                    </div>
+                    <div class="div">
+                            <h5>Expected Salary</h5>
+                            <input type="text" class="input" name="Salary">
+                    </div>
+                 </div>
+           		<div class="input-div pass">
+           		   <div class="i"> 
+           		    	
+           		   </div>
+           		   <div class="div">
+           		    	<h5>Mobile</h5>
+           		    	<input type="text" class="input" name="Mobile">
+            	   </div>
+            	</div>
+                <div class="input-div pass">
+                    <div class="i"> 
+                         
+                    </div>
+                    <div class="div">
+                         <h5>College Name</h5>
+                         <input type="text" class="input" name="College">
+                 </div>
+              </div>
+            	<input type="submit" class="btn" value="Login">
+            </form>
+            <script >
+
+                var form = document.getElementById('sheetdb-form');
+             form.addEventListener("submit", e => {
+               e.preventDefault();
+               fetch(form.action, {
+                 method: "POST",
+                 body: new FormData(document.getElementById("sheetdb-form")),
+               }).then(
+                 response => response.json()
+               ).then((html) => {
+
+                 // you can put any JS code here
+                 window.open(alert("Thanks for registration") , '_blank');
+
+               });
+             });
+                function openPopup()
+                {
+
+                  var element=document.getElementById("popup");
+                  element.classList.add("open");
+
+                }
+                function closePopup()
+                {
+                   var element=document.getElementById("popup");
+                  element.classList.remove("open");
+
+                }
+
+
+                </script>
+        </div>
+    </div>
+    <script type="text/javascript" src="main.js"></script>
+</body>
+</html>
